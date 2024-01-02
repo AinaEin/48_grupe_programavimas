@@ -1,0 +1,33 @@
+{
+  "name": "48_grupe_programavimas",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "metodai:number": "node --watch metodai/number.js",
+    "metodai:string": "node --watch metodai/string.js",
+    "tipas": "node --watch kintamieji/tipas.js",
+    "sprendimai:uzduotys": "node --watch sprendimai/uzduotys.js",
+    "marksAverage": "node --watch functions/marksAverage.js",
+    "for": "node --watch ciklas/for.js",
+    "if": "node --watch palyginimas/if.js",
+    "sum": "node --watch functions/sum.js",
+    "empty": "node --watch functions/empty.js",
+    "array": "node --watch kintamieji/array.js",
+    "boolean": "node --watch kintamieji/boolean.js",
+    "uzduotys": "node --watch kintamieji/uzduotys.js",
+    "string": "node --watch kintamieji/string.js",
+    "number": "node --watch kintamieji/number.js",
+    "number-nodemon": "nodemon kintamieji/number.js",
+    "dev": "nodemon index.js",
+    "fail": "node --watch index.js",
+    "demo": "echo \"Demo print\" && exit 1",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Aina Einikyte (https://github.com/AinaEin)",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  }
+}
