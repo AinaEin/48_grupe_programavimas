@@ -11,7 +11,7 @@ console.log(a[2.5]);
 
 console.log('-------------------------');
 
-console.log(a.at(0, a[0]));
+console.log(a.at(0, a[0]));                   
 console.log(a.at(4, a[4]));
 console.log(a.at(-1, a[a.length - 1]));   // 5 simboliai - 1 = 4 pagal indexa simboliai
 console.log(a.at(-2, a[a.length - 2]));
@@ -128,3 +128,38 @@ console.log(raides);
 
 const raides2 = 'vvvvarasa'.split("v");
 console.log(raides2);
+
+console.log("-------------------------");
+
+console.log('PoMiDoRaS'.toLowerCase());
+console.log('PoMiDoRas'.toUpperCase());
+
+const pomBad = 'PoMiDoRaS';
+
+function capitalize(text) {
+    return text[0].toUpperCase() + text.slice(1).toLowerCase();
+    //return text.toLowerCase().replace(text[0]), text[0].toUpperCase();
+}
+
+const pomGood = capitalize(pomBad);
+console.log(pomBad, '-->', pomGood);
+
+console.log(`"${'labas'.trim()}"`);
+console.log(`"${'labas'.trimStart()}"`);
+console.log(`"${"labas".trimEnd()}"`);
+
+console.log(`"${"rikiki         ".trim()}"`);
+console.log(`"${"rikiki         ".trimStart()}"`);
+console.log(`"${"rikiki         ".trimEnd()}"`);
+
+console.log(`"${"     rokoko".trim()}"`);
+console.log(`"${"     rokoko".trimStart()}"`);
+console.log(`"${"     rokoko".trimEnd()}"`);
+
+console.log(`"${"     pomidoras      ".trim()}"`);
+console.log(`"${"     pomidoras      ".trimStart()}"`);
+console.log(`"${"     pomidoras      ".trimEnd()}"`);
+
+console.log(`"${"labas    rytas".trim()}"`);
+console.log(`"${"labas    rytas".trimStart()}"`);
+console.log(`"${"labas    rytas".trimEnd()}"`);
