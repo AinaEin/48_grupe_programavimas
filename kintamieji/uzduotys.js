@@ -121,8 +121,9 @@ console.log("Sum:", marksArraySum);
 
 console.log("----------->");
 
-
+// <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  >>>>>>>>>>>>>>>>>>>>>>>>>>
 // 1. Funkcija pavadinimu “tusciaFunkcija"
+// <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  >>>>>>>>>>>>>>>>>>>>>>>>>>
 
 function tusciaFunkcija() {
   return false;
@@ -131,8 +132,9 @@ function tusciaFunkcija() {
 console.log(tusciaFunkcija());
 
 console.log("----------->");
-
+// <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  >>>>>>>>>>>>>>>>>>>>>>>>>>
 // 2. Funkcija pavadinimu “daugyba”
+// <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  >>>>>>>>>>>>>>>>>>>>>>>>>>
 
 function daugyba(numb1, numb2, numb3) {
   const multi = numb1 * numb2;
@@ -283,8 +285,9 @@ if (sarsPirmas.lenght <= sarsAntras.length) {
 }
 
 console.clear();
-
+// <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  >>>>>>>>>>>>>>>>>>>>>>>>>>
 // 3. Funkcija pavadinimu “skaitmenuKiekisSkaiciuje”
+// <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  >>>>>>>>>>>>>>>>>>>>>>>>>>
 
 function skaitmenuKiekisSkaiciuje(skaicius) {
     // Patikriname, ar perduotas kintamasis yra skaičius
@@ -469,7 +472,7 @@ console.log({ numbC3, numbC5, numbC7 });
 console.log("----------->");
 
 // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  >>>>>>>>>>>>>>>>>>>>>>>>>>
-// 3. Funkcija pavadinimu “didziausiasSkaiciusSarase”
+// 4. Funkcija pavadinimu “didziausiasSkaiciusSarase”
 // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  >>>>>>>>>>>>>>>>>>>>>>>>>>
 
 const numberArray1 = [1];
@@ -513,3 +516,67 @@ console.log(largestNumb(numberArray5));
 console.log(largestNumb(numberArray6));
 console.log(largestNumb(numberArray7));
 
+console.log('------------------------------------');
+
+// <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  >>>>>>>>>>>>>>>>>>>>>>>>>>
+// 5. Funkcija pavadinimu “isrinktiRaides”
+// <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  >>>>>>>>>>>>>>>>>>>>>>>>>>
+
+const text = 'abcdefghijkl';
+const number1 = 1561;
+
+function textLetters(text, number1) {
+  // Patikriname, ar pirmasis kintamasis yra tekstas
+  if (typeof text !== 'string') {
+    return "Pirmasis kintamasis yra netinkamo tipo.";
+  }
+  // Patikriname, ar pirmasis kintamasis yra tinkamo dydžio
+  if (text === '' || text.length > 100) {
+    return "Pirmojo kintamojo reikšmė yra netinkamo dydžio.";
+  }
+  // Patikriname, ar antrasis kintamasis yra skaičius
+  if (typeof number1 !== 'number') {
+    return "Antrasis kintamasis yra netinkamo tipo.";
+  }
+  // Patikriname, ar antrasis kintamasis yra didesnis už nulį
+  if (number1 <= 0) {
+    return "Antrasis kintamasis turi būti didesnis už nulį.";
+  }
+  // Patikriname, ar antrasis kintamasis yra ne didesnis už teksto ilgį
+  if (number1 > text.length) {
+    return "Antrasis kintamasis turi būti ne didesnis už pateikto teksto ilgį.";
+  }
+  // Išrenkame kas kelintą raidę ir sudedame į naują kintamąjį
+  let rezult = '';
+  for (let i = number1 - 1; i < text.length; i += number1) {
+    rezult += text[i];
+  }
+
+  return rezult;
+}
+
+console.log(textLetters("abcdefg", 2)); // rezultatas: "bdf"
+console.log(textLetters("abcdefghijkl", 3)); // rezultatas: "cfil"
+console.log(textLetters("abc", 0)); // rezultatas: "Antrasis kintamasis turi būti didesnis už nulį."
+console.log(textLetters("abc", 4)); // rezultatas: "Antrasis kintamasis turi būti ne didesnis už pateikto teksto ilgį."
+console.log(textLetters(1561, 2)); // rezultatas: "Pirmasis kintamasis yra netinkamo tipo."
+
+// <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  >>>>>>>>>>>>>>>>>>>>>>>>>>
+// 5. Funkcija pavadinimu “dalyba”
+// <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  >>>>>>>>>>>>>>>>>>>>>>>>>>
+
+  function divide(first, second) {
+  // Tikriname, ar abu kintamieji yra skaičiai
+  if (typeof first !== 'number' || typeof second !== 'number') {
+  }  //dalyba
+    return first / second;
+};
+
+console.log(divide(10, 2)); // rezult: 5
+console.log(divide(8, 4)); // rezult: 2
+console.log(divide(15, 3)); // rezult: 5
+console.log(divide(0, 7)); // rezult: 0
+console.log(divide(12, 0)); // rezult: "Infinity." dalyba is nulio negalima
+console.log(divide('labas', 5)); // rezult: NaN
+console.log(divide(10, 'saule')); // rezult: NaN
+console.log(divide("abc", "def")); // rezult: NaN
