@@ -70,3 +70,4 @@ console.log(abbr("Pamela Anderson"));
 console.log(abbr("Jan Clod VanDam"));
 console.log(abbr("Jan Clod Van Dam"));
 console.log(abbr("Super Jan Clod Van Dam"));
+
