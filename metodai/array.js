@@ -97,3 +97,56 @@ console.log(number.slice());
 console.log(number.slice(2));
 console.log(number.slice(1, 3));
 console.log(number.slice(0, -1));
+
+console.clear();
+
+console.log('--------------------------------');
+
+
+const names = [];
+console.log(names);
+
+const n1 = names.push('Jonas');   //nauja irasa itraukia i masyvo gala
+console.log(n1, names);
+
+const n2 = names.push("Maryte");
+console.log(n2, names);
+
+const n3 = names.push("Petras");
+console.log(n3, names);
+
+const n4 = names.push("Ona");
+console.log(n4, names);
+
+const studens = [];
+console.log(studens);
+
+studens.push("Ona", 'Jonas');
+console.log(studens);
+
+const n5 = names.pop();     // iskelia is masyvo nuo galo 
+console.log(n5, names);
+
+const n6 = names.pop();
+console.log(n6, names);
+
+const n7 = names.unshift('Juozas');   //prideda i masyvo prieki 
+console.log(n7, names);
+
+const n8 = names.unshift("Barbora");
+console.log(n8, names);
+
+const n9 = names.shift("Barbora");     //isima is masyvo prieko 
+console.log(n9, names);
+
+const n10 = names.shift("Juozas"); 
+console.log(n10, names);
+
+console.log("--------------------------------");
+
+const colors = ['red', 'blue', 'yellow', 'pink', 'green', 'orange', 'violet' ];
+console.log(colors);
+                               // pirmu skaiciuoja klausia nuo kur isimti 
+colors.splice(3, 2, 'BLACK');  // antras skaicius rodo kiek isimti elementu
+console.log(colors);          // treciam rasome ka norime irasyti i masyva kieknori
+
