@@ -66,6 +66,81 @@ console.log("Dvejetu kiekis", kiekisDvejetu);
 
 console.log("-------------");
 
+// 6 uzduotis - mentorius
+
+function calculateResult() {
+  // sugalvoti du kintamuosius tarp 0 and 4
+  const randomNumber1 = Math.floor(Math.random() * 5);
+  const randomNumber2 = Math.floor(Math.random() * 5);
+
+  // Didziausios ir maziausios vertes
+  const largerNumber = Math.max(randomNumber1, randomNumber2);
+  const smallerNumber = Math.min(randomNumber1, randomNumber2);
+
+  // Dalyba rezultatui gauti
+  const result = largerNumber / smallerNumber;
+
+  // Rezultatas du skaiciai po kablelio
+  console.log(result.toFixed(2));
+}
+
+// Call the function to calculate and print the result
+calculateResult();
+
+console.log("-------------");
+
+// 7. uzduotis - mentorius
+
+function calculateResult() {
+  // sugalvoti tris kintamuosius tarp 0 and 25
+  const randomNumber3 = Math.floor(Math.random() * 26);
+  const randomNumber4 = Math.floor(Math.random() * 26);
+  const randomNumber5 = Math.floor(Math.random() * 26);
+  // sudelioti skaiciu eiliskuma ir surasti jo vidurine reiksme su indeksu
+  const numbers = [randomNumber3, randomNumber4, randomNumber5];
+  numbers.sort((a,b) => a - b);
+  const middleValue = numbers[1];
+  //pamatyti 3 parinktus kintamuosius ir vid reiksme
+  console.log('allNumbers:', randomNumber3, randomNumber4, randomNumber5);
+  console.log('middle value:', middleValue);
+
+}
+calculateResult();
+
+console.log("-------------");
+
+// 8. uzduotis - mentorius
+
+const name = 'Kyeno';
+const lastName = 'Reavse';
+
+answer = `${name[0]}.${lastName[0]}.`;
+console.log(answer);
+
+console.log("-------------");
+
+// 9. uzduotis - mentorius
+
+function sugeneruotasBetkoksStringas() {
+  const raides = 'abcdefghijklmnoprstuvz';
+  let betkoksStringas = '';
+
+  for (let i = 0; i < 3; i++) {
+    const betkoksIndexas = Math.floor(Math.random() * raides.length);
+    betkoksStringas += raides.charAt(betkoksIndexas);
+  }
+
+  return betkoksStringas;
+}
+
+// Iskviecia funkcija sugeneruoti bet koki stringa
+const randomString = sugeneruotasBetkoksStringas();
+
+// parodo koks stringas gavosi
+console.log(randomString);
+
+console.log("-------------");
+
 // 1.1 uzduotis - mentoriaus
 
 function pasisveikinimas(name) {
@@ -89,3 +164,94 @@ let rezultatas = skaiciuotiSimbolius(ivestasTekstas);
 
 // Atvaizduojame rezultatą konsolėje
 console.log("Teksto simbolių skaičius: " + rezultatas);
+
+console.log("----------->");
+
+// 2.3 uzduotis - mentoriaus
+
+const name1 = 'Albert';
+const lastName1 = 'Einshtein';
+
+function inicialai(name1, lastName1) {
+    const pirmasInicialas = name1.charAt(0).toUpperCase();
+    const antrasInicialas = lastName.charAt(0).toUpperCase();
+  return pirmasInicialas + '.' + antrasInicialas + '.';
+}
+const result = inicialai ('Albert', 'Einshtein');
+console.log(result);
+
+console.log("----------->");
+
+// 2.4 uzduotis - mentoriaus
+
+function calculateResult() {
+  // sugalvoti tris kintamuosius tarp 0 and 5
+  const randomNumber3 = Math.floor(Math.random() * 6);
+  const randomNumber4 = Math.floor(Math.random() * 6);
+  const randomNumber5 = Math.floor(Math.random() * 6);
+  
+  // sugrazina kaip stringa ir padeda kablelius po kiekvieno skaiciaus
+  returnString = `${randomNumber3}, ${randomNumber4}, ${randomNumber5}`;
+  return returnString;
+}
+// isspausdinamas rezultatas
+const result1 = calculateResult();
+console.log(result1);
+
+console.log("----------->");
+
+// 2.5 uzduotis - mentoriaus
+
+function randomArray (from, to, limit) {
+  // patikrinti ar jie yra skaiciai
+  if (typeof from !== 'number', to !== 'number', limit !== 'number') {
+    
+  }
+    //padaryti tuscia afreju i kuri eis bet kokie skaiciai is po push
+   const resultArray = [];
+
+  for (let i = 0; i < limit; i++) {
+    //sugeneruojam bet kokius skaicius tarpe 'from' ir 'to
+    const randomValue = Math.floor(Math.random() * (to - from + 1)) + from;
+    resultArray.push(randomValue);
+  }
+
+  return resultArray;
+}
+  const result2 = randomArray(30, 50, 5);
+  console.log(result2);
+
+  console.log("----------->");
+
+  // 2.6 uzduotis - mentoriaus
+
+  const cube = (num, pwr) => num ** pwr;
+
+  console.log(cube(6, 3));
+
+  // 2.7 uzduotis - mentoriaus
+
+  // 2.8 uzduotis - mentoriaus
+
+  // 2.9 uzduotis - mentoriaus
+
+  // 2.10 uzduotis - mentoriaus
+
+  function sugeneruotasArray(length, min, max) {
+    const resultArray = [];
+
+    for (let i = 0; i < length; i++) {
+      const randomValue = Math.floor(Math.random() * (max - min + 1)) + min;
+      resultArray.push(randomValue);
+    }
+
+    return resultArray;
+  }
+
+  // Sugeneruoti 100 elementų masyvą su skaičiais nuo 997 iki 15991
+  const naujasArray = sugeneruotasArray(100, 997, 15991);
+
+  // Spausdinti sugeneruotą masyvą į konsolę
+  console.log(naujasArray);
+
+  const str = "The greatest victory is that which requires no battle";
