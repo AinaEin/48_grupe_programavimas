@@ -4,6 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "biggest": "node --watch uzd/biggest.js",
+    "uzd:number": "node --watch uzd/number-size.js",
+    "text": "node --watch uzd/text-reverse.js",
     "hof": "node --watch metodai/array-hof.js",
     "arrow": "node --watch functions/arrow.js",
     "metodai:array": "node --watch metodai/array.js",
