@@ -235,6 +235,7 @@ function randomArray (from, to, limit) {
 
   // 2.9 uzduotis - mentoriaus
 
+
   // 2.10 uzduotis - mentoriaus
 
   function sugeneruotasArray(length, min, max) {
@@ -255,3 +256,4 @@ function randomArray (from, to, limit) {
   console.log(naujasArray);
 
   const str = "The greatest victory is that which requires no battle";
+
