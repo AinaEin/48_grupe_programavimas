@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "hof": "node --watch metodai/array-hof.js",
     "arrow": "node --watch functions/arrow.js",
     "metodai:array": "node --watch metodai/array.js",
     "metodai:number": "node --watch metodai/number.js",
