@@ -1,3 +1,5 @@
+import spausdintiSvente from './spausdintiSvente.js';
+
 /* 
 OBJECT - objektas
 */
@@ -111,6 +113,14 @@ const summer = {
                 month: 7,
                 day: 6,
             }
+        },
+        {
+            name: 'Zolines',
+            date: {
+                year: 2024,
+                month: 8,
+                day: 15,
+            }
         }
     ]
 }
@@ -135,3 +145,34 @@ console.log(summer.title.en);
 console.log(summer.months[0]);
 console.log(summer.months[1]);
 console.log(summer.months[2]);
+
+console.clear();
+
+console.log(summer.holidays[0].name);
+console.log(summer.holidays[0].date);
+console.log(summer.holidays[0].date.year);
+console.log(summer.holidays[0].date.month);
+console.log(summer.holidays[0].date.day);
+
+console.log('----------------------------');
+
+// Jei turi sarasa turi dirbti su ciklu FOR
+
+// 1) Jonines - 2024m Birzelio 23d.
+// 2) Mindaugo karunavimas - 2024m Liepos 6d.
+// 3) Zolines - 2024m Rugpjucio 15d.
+// 4) Pavadinimas - 2024m Menuo 1d.
+// 5) Pavadinimas - 2024m Menuo 1d.
+
+
+//for (let i = 0; i < summer.holidays.length; i++) {
+//    console.log('--------------------------');
+//   console.log(summer.holidays[i]);
+//}
+
+console.log("--------------------------");
+
+for (let i = 0; i < summer.holidays.length; i++) {
+  const text = spausdintiSvente(i, summer.holidays[i]);
+  console.log(text);
+}
