@@ -91,7 +91,7 @@ console.log("-------------");
 
 // 7. uzduotis - mentorius
 
-function calculateResult() {
+function calculateResult1() {
   // sugalvoti tris kintamuosius tarp 0 and 25
   const randomNumber3 = Math.floor(Math.random() * 26);
   const randomNumber4 = Math.floor(Math.random() * 26);
@@ -105,7 +105,7 @@ function calculateResult() {
   console.log('middle value:', middleValue);
 
 }
-calculateResult();
+calculateResult1();
 
 console.log("-------------");
 
@@ -114,7 +114,7 @@ console.log("-------------");
 const name = 'Kyeno';
 const lastName = 'Reavse';
 
-answer = `${name[0]}.${lastName[0]}.`;
+const answer = `${name[0]}.${lastName[0]}.`;
 console.log(answer);
 
 console.log("-------------");
@@ -184,18 +184,17 @@ console.log("----------->");
 
 // 2.4 uzduotis - mentoriaus
 
-function calculateResult() {
+function calculateResult2() {
   // sugalvoti tris kintamuosius tarp 0 and 5
   const randomNumber3 = Math.floor(Math.random() * 6);
   const randomNumber4 = Math.floor(Math.random() * 6);
   const randomNumber5 = Math.floor(Math.random() * 6);
   
   // sugrazina kaip stringa ir padeda kablelius po kiekvieno skaiciaus
-  returnString = `${randomNumber3}, ${randomNumber4}, ${randomNumber5}`;
-  return returnString;
+  return `${randomNumber3}, ${randomNumber4}, ${randomNumber5}`;
 }
 // isspausdinamas rezultatas
-const result1 = calculateResult();
+const result1 = calculateResult2();
 console.log(result1);
 
 console.log("----------->");
@@ -257,3 +256,57 @@ function randomArray (from, to, limit) {
 
   const str = "The greatest victory is that which requires no battle";
 
+console.clear();
+
+
+function weatherInfo(temp) {
+  var c = convertToCelsius(temp);
+  if (c < 0) {
+    return c + " is freezing temperature";
+  } else {
+    return c + " is above freezing temperature";
+  }
+}
+
+function convertToCelsius(temperature) {
+  var celsius = (temperature - 32) + 5 / 9;
+  return celsius;
+}
+
+console.log(weatherInfo(50));
+
+
+function rainAmount(mm){
+    if (mm > 40) {
+         return `You need to give your plant ${mm - 40} mm of water`;
+      } else {
+         return "Your plant has had more than enough water for today!";
+    }
+}
+
+console.log(rainAmount(100));
+
+
+function myFirstKata(a, b) {
+  if (typeof a !== "number" || b  !== "number") {
+    return false;
+    } else {
+      return a % b + b % a;  
+ }
+}
+
+const solve = (x, y) => x / y;
+
+console.log(solve(2, 1));
+
+const name5 = "Abe";
+function greet_abe(name5) {
+  return "Hello, " + name5 + "!";
+};
+console.log(greet_abe(name5));
+
+const name6 = "Ben";
+function greet_ben(name6) {
+  return "Hello, " + name6 + "!";
+};
+console.log(greet_ben(name6));
