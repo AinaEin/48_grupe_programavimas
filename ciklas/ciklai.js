@@ -32,6 +32,7 @@ for (let i = 0; i < colorsList.length; i++) {
 }
 
 console.log("FOR OF:------------------");
+//jei netenkina salygos nepradeda suktis
 // nesimato indexo, eina automatiskai
 let i2 = 0;
 for (const color of colorsList) {
@@ -44,7 +45,7 @@ console.log("WHILE:------------------");
 let i3 = 0;
 while (i3 < colorsList.length) {
     const color = colorsList[i3];
-    console.log((i3, color));
+    console.log(i3, color);
     i3++;
 }
 
@@ -59,7 +60,8 @@ do {
 
 
 console.log("FOR-EACH:------------------");
-//iteruoja automatiskai per masyva
+// iteruoja automatiskai per masyva 
+// forEach() skliaustuose parasai, kaip turi elktis su kiekvieno masyvo nariu
 const colorForEach = colorsList.forEach((color, i5, originalArray) => {
     console.log(color, i5, originalArray);
 });
