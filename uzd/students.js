@@ -257,3 +257,21 @@ console.log(sortStudentsByAverage(students, (a, b) => a.average - b.average));
 console.log(sortStudentsByAverage(students, (a, b) => b.average - a.average));
 
 
+// Sukuriamas bendras masyvas is visu studentu
+
+console.log(students);
+let bendriPazymiai = [];
+
+for (let i = 0; i < students.length; i++) {
+  bendriPazymiai = bendriPazymiai.concat(students[i].marks);
+}
+
+console.log(bendriPazymiai);
+
+// kurie du masyvai turi daugiau nei 2 skaicius masyve
+
+for (const student of students) {
+  if (student.marks.length > 2) {
+    console.log(student.name);
+  }
+}
