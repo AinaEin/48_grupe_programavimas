@@ -310,3 +310,54 @@ function greet_ben(name6) {
   return "Hello, " + name6 + "!";
 };
 console.log(greet_ben(name6));
+
+console.log('--------------------------------');
+
+
+function problem(x) {
+  if (x === 'string') {
+    return 'Error';
+}
+  if (x === 'number') {
+    return number * 50 + 6;
+  } else {
+    return 'Error';
+  };
+}
+
+console.log("--------------------------------");
+
+
+const items = [];
+items.push({ a: "b", c: "d" });
+console.log(items);
+
+
+function helloWorld() {
+  const str = "Hello World!";
+  console.log(str);
+}
+helloWorld();
+
+var a = "code";
+var b = "wa.rs";
+const name9 = (a, b) => {
+  return a + b;
+};
+
+console.log(name9(a, b))
+
+function hero(bullets, dragons) {
+  if (bullets > dragons * 2) {
+    return true;
+  } else {
+    return false;
+  } 
+}
+
+
+function mystery(results) {
+  var results = { sanity: "Hello" };
+  return results;
+}
+console.log(mystery());
