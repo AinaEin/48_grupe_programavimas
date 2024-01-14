@@ -99,7 +99,7 @@ console.log("---------------------------------");
 // koks yra vardas studento, kuris turi maziausia pazymi?
 
 function findLowestGrade(students) {
-  let name = null;
+  let name = '';
   let lowestGrade = null;
 
   students.forEach((student) => {
