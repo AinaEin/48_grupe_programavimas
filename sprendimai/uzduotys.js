@@ -361,3 +361,36 @@ function mystery(results) {
   return results;
 }
 console.log(mystery());
+
+
+const str6 = "today";
+
+const arr = str6.split(" ");
+
+for (let i = 0; i < arr.length; i++) {
+  arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
+}
+const str7 = arr.join(" ");
+console.log(str7);
+
+const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
+  return (mpg * fuelLeft) >= distanceToPump; 
+};  
+
+function peopleWithAgeDrink(old) {
+  if (old <= 13) {
+    return "drink toddy";
+  } else {
+    if (old <= 17) {
+      return "drink coke";
+    } else {
+     if (old <= 20) {
+        return "drink beer";
+        } else {
+          if (old <= 30) {
+            return "drink whisky";
+        }
+      }
+    }
+  }
+};  
