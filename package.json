@@ -2,9 +2,10 @@
   "name": "48_grupe_programavimas",
   "version": "1.0.0",
   "description": "",
-  "type":"module",
+  "type": "module",
   "main": "index.js",
   "scripts": {
+    "sprendimai:uzduotys2": "node --watch sprendimai/uzduotys2.js",
     "ciklai": "node --watch ciklas/ciklai.js",
     "ternary": "node --watch palyginimas/ternary.js",
     "students": "node --watch uzd/students.js",
