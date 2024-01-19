@@ -174,7 +174,7 @@ const lastName1 = 'Einshtein';
 
 function inicialai(name1, lastName1) {
     const pirmasInicialas = name1.charAt(0).toUpperCase();
-    const antrasInicialas = lastName.charAt(0).toUpperCase();
+    const antrasInicialas = lastName1.charAt(0).toUpperCase();
   return pirmasInicialas + '.' + antrasInicialas + '.';
 }
 const result = inicialai ('Albert', 'Einshtein');

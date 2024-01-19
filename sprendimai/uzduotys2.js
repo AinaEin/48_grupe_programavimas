@@ -29,4 +29,16 @@ function getAverage(marks) {
 }
 console.log(getAverage(marks));
 
+console.log("-----------------------------");
 
+function abbrevName(name) {
+  return name1
+    .split(" ")
+    .map((name) => name[0])
+    .join(".")
+    .toUpperCase();
+}
+
+const num = 123;
+const a = num.toString();
+console.log(a)
