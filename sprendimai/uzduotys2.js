@@ -109,3 +109,65 @@ function findDifference(e) {
 };
 console.log(findDifference[3, 2, 5]);
 
+const translation = {
+  ą: 'a',
+  ć: 'c',
+  ę: 'e',
+  ł: 'l',
+  ń: 'n',
+  ó: 'o',
+  ś: 's',
+  ź: 'z',
+  ż: 'z'
+}; 
+
+function correctPolishLetters (string) {
+  let answer = '';
+  for (let i = 0; i < string.length; i++) {
+    const key = string[i];
+    const letter = translation[key];
+      if(translation[key]) {
+        answer += translation[key];
+        } else {
+          answer += key;
+           
+    }
+  }
+            return answer;
+}
+
+console.log(correctPolishLetters("Jędrzej Błądziński"));
+
+var summation = function (a, b) {
+  if (isNaN(a) || isNaN(b)) {
+  }
+  return a + b;
+};
+function NumberWithSummation(n) {
+  let sum = 0;
+
+  for (let i = 1; i <= n; i++) {
+    sum = summation(sum, i);
+  }
+
+  return sum;
+}
+
+console.log(NumberWithSummation(5));
+
+
+// https://www.codewars.com/kata/5ab52526379d20736b00000e/train/javascript
+
+const guns = {
+  PT92: 17,
+  M4A1: 30,
+  M16A2: 30,
+  PSG1: 5,
+};
+
+function magNumber(info){
+  const magazineSize = guns[info[0]];
+  const streetToClear = info[1];
+  const totalBullets = streetToClear * 3;
+  return Math.ceil(totalBullets / magazineSize);
+};
