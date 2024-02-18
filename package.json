@@ -5,6 +5,7 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
+    "destructuring": "node --watch operators/destructuring.js",
     "sprendimai:uzduotys2": "node --watch sprendimai/uzduotys2.js",
     "ciklai": "node --watch ciklas/ciklai.js",
     "ternary": "node --watch palyginimas/ternary.js",
