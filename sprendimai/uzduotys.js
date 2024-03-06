@@ -543,7 +543,7 @@ console.log(prime(5));
 
 // 14. Parašykite funkciją, kuri priima masyvą skaičių ir grąžina jį surikiuotą mažėjančia tvarka.
 
-x3 = [15, 33, 22, 7, 51];
+const x3 = [15, 33, 22, 7, 51];
 console.log(x3.sort((a, b) => b - a));
 
 
