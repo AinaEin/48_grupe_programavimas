@@ -478,7 +478,12 @@ if (checkPalindrom('Madam')) {
 
 // 10. Sukurkite funkciją, kuri priima skaičių ir grąžina true, jei skaičius yra lyginis, ir false, jei skaičius yra nelyginis.
 
-
+function isEven(number) {
+  if (number % 2 === 0) {
+    return true;
+  }
+  return false;
+};
 
 
 // 11. Parašykite funkciją, kuri priima tekstą ir dvi eilutes: pakeistiną simbolį ir pakeitimo simbolį. Funkcija grąžina naują tekstą su pakeistais simboliais.
@@ -538,7 +543,8 @@ console.log(prime(5));
 
 // 14. Parašykite funkciją, kuri priima masyvą skaičių ir grąžina jį surikiuotą mažėjančia tvarka.
 
-
+x3 = [15, 33, 22, 7, 51];
+console.log(x3.sort((a, b) => b - a));
 
 
 // 15. Sukurkite funkciją, kuri priima du skaičius kaip pradžios ir pabaigos intervalo ribas ir grąžina visų skaičių, esančių tame intervale, sumą.
