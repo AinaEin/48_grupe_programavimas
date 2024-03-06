@@ -394,3 +394,210 @@ function peopleWithAgeDrink(old) {
     }
   }
 };  
+
+// Prisimintti funkcijų panaudojimą su mentoriumi
+
+// 1. Parašykite funkciją, kuri priima vartotojo vardą kaip argumentą ir grąžina pasveikinimo žinutę.
+
+function sveikinimas(vardas){
+    console.log('labas ' + vardas);
+}
+sveikinimas ('Jonas');
+
+// 2. Sukurkite funkciją, kuri priima du skaičius kaip argumentus ir grąžina jų sumą.
+
+function suma (a, b) {
+  console.log(a + b);
+}
+suma (2, 3);
+
+// 3. Parašykite funkciją, kuri priima masyvą kaip argumentą ir grąžina visų masyvo elementų sumą.
+
+const array = [13, 44, 57, 79, 32];
+
+    let sum = 0;
+
+    for (let i = 0; i < array.length; i++) {
+        
+        sum += array[i];
+}
+
+console.log(sum);
+
+// 4. Sukurkite funkciją, kuri priima masyvą skaičių ir grąžina didžiausią skaičių masyve.
+
+const x = [3, 5, 11, 7, 9];
+
+console.log(Math.max(...x));
+
+//5. Parašykite funkciją, kuri priima tekstą kaip argumentą ir grąžina to teksto ilgį.
+
+const word = "Labas rytas Lietuva";
+const length = word.split(" ").join("").length;
+
+console.log(length);
+
+//6. Sukurkite funkciją, kuri priima skaičių ir grąžina jo faktorialą.
+
+const x1 = [2, 4, 5, 7, 3];
+const x2 = x1.reduce((total, each) => total * each, 1);
+console.log(x2);
+
+
+// 7. Parašykite funkciją, kuri priima masyvą skaičių ir skaičių kaip argumentus, o grąžina naują masyvą, kuriame yra tik tie skaičiai, kurie didesni už pateiktą skaičių.
+
+const array1 = [65, 16, 0, 6, 64, 1, 68];
+const number = 16;
+
+const returnLarger = (arr, num) => arr.filter((n) => n > num);
+
+console.log(returnLarger(array1, number));
+
+
+// 8. Sukurkite funkciją, kuri priima tekstą kaip argumentą ir grąžina jį atvirkštine tvarka.
+
+const string = "Labas rytas Lietuva!";
+function atvirksciai(str) {
+  console.log(str.split("").reverse().join(""));
+}
+console.log(atvirksciai(string));
+
+
+// 9. Parašykite funkciją, kuri nustato, ar pateiktas tekstas yra palindromas.
+
+function checkPalindrom(str) {
+  str = str.toLowerCase();
+  return str == str.split("").reverse().join("");
+}
+
+if (checkPalindrom('Madam')) {
+  console.log("Palindrome");
+} else {
+  console.log("Not Palindrome");
+};
+
+// 10. Sukurkite funkciją, kuri priima skaičių ir grąžina true, jei skaičius yra lyginis, ir false, jei skaičius yra nelyginis.
+
+
+
+
+// 11. Parašykite funkciją, kuri priima tekstą ir dvi eilutes: pakeistiną simbolį ir pakeitimo simbolį. Funkcija grąžina naują tekstą su pakeistais simboliais.
+
+let originalString = "The color of the sky changes day and night.";
+
+let newString = originalString.replace("color", "colour");
+
+console.log(newString);
+
+// 12. Sukurkite funkciją, kuri priima temperatūrą Celsijaus laipsniais ir konvertuoja ją į Farenheito laipsnius.
+
+
+function convertToF(celsius) {
+  let fahrenheit;
+  fahrenheit = celsius * (9 / 5) + 32;
+  return fahrenheit;
+}
+console.log(convertToF(55));
+
+
+// 13. 1. Parašykite funkciją, kuri priima masyvą ir grąžina naują masyvą be dublikatų.
+
+let array2 = ["summer", "autumn", "winter", "spring", "summer", "autumn"];
+
+function removeDuplicates(array2) {
+  let one = [];
+  array2.forEach((element) => {
+    if (!one.includes(element)) {
+      one.push(element);
+    }
+  });
+  return one;
+}
+console.log(removeDuplicates(array2));
+
+
+// 13. 2. Sukurkite funkciją, kuri priima skaičių ir grąžina true, jei skaičius yra pirminis, ir false, jei ne.
+
+function prime(num) {
+  if (num === 1) {
+    return false;
+  }
+  if (num === 2) {
+    return true;
+  } else {
+    for (let x = 2; x < num; x++) {
+      if (num % x === 0) {
+        return false;
+      }
+      return true;
+    }
+  }
+}
+console.log(prime(5)); 
+
+
+// 14. Parašykite funkciją, kuri priima masyvą skaičių ir grąžina jį surikiuotą mažėjančia tvarka.
+
+
+
+
+// 15. Sukurkite funkciją, kuri priima du skaičius kaip pradžios ir pabaigos intervalo ribas ir grąžina visų skaičių, esančių tame intervale, sumą.
+
+const first = 1;
+const last = 8;
+function findNumbers(first, last) {
+
+  if (typeof first !== "number" || typeof last !== "number") {
+    return "Error: need to be number";
+  }
+
+  const result = [];
+
+  for (let i = first + 1; i < last; i++) {
+    result.push(i);
+  }
+
+  return result;
+}
+console.log(findNumbers(first, last));
+
+
+// 17. Parašykite funkciją, kuri priima tekstą ir grąžina jį, pakeisdamas kiekvieną raidę į sekantį raidę abėcėlėje.
+
+function letterChanges(text) {
+  return text.replace(/[a-zA-Z]/g, function(x) {
+    return String.fromCharCode(x.charCodeAt(0)+1);
+  })
+}
+
+console.log(letterChanges("Hello World"));
+
+// 18. Sukurkite funkciją, kuri priima gimimo metus ir grąžina asmenio amžių.
+
+function getUserAge(user) {
+  const year = new Date().getFullYear();
+  return year - user;
+}
+console.log(getUserAge(1993));
+
+
+// 19. Parašykite funkciją, kuri priima tekstą ir simbolį, o grąžina, kiek kartų tas simbolis pasikartoja tekste.
+
+const text = "On monday will be a celebration";
+const symbol = "o";
+
+function countSameLetters(string1, character) {
+  const count = string1.toLowerCase().split("").filter((x) => x === character).length;
+  return count;
+}
+
+console.log(countSameLetters(text, symbol));
+
+// 20. Parašykite funkciją, kuri priima kelių masyvų sąrašą ir grąžina naują masyvą, kuris sudarytas tik iš tų elementų, kurie pasikartoja visuose pradiniuose masyvuose.
+
+const array3 = [5, 7, 13, 21, 14];
+const array4 = [6, 21, 15, 14, 8];
+const array5 = array3.filter(element => array4.lastIndexOf(element) !== -1);
+console.log(array5);
+const array6 = [...new Set([...array3, ...array4])];
+console.log(array6, '--> sitas');
