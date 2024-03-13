@@ -307,17 +307,19 @@ const properties = {
   gender: "female",
 };
 
-// let count = 0;
+let count = 0;
 
-// for (let property in properties) {
-//   count++;
-// };
+for (let property in properties) {
+  count++;
+};
 
-// console.log(count, '--> 8.');
+console.log(count, '--> 8.');
 
-let count = Object.keys(properties).length;
+// let count = Object.keys(properties).length;
 
-console.log(count, "--> 8.");
+// console.log(count, "--> 8.");
+
+
 // 9. Sąlyginis Objektų Atrinkimas: Turite vartotojų masyvą su objektais, kuriuose yra vardas ir amžius. Naudodami for of ciklą, išveskite tik tuos vartotojus, kurių amžius yra didesnis nei 18.
 
 // 10. Objekto Savybių Keitimas: Turite objektą, kuriame saugomi įvairių žmonių amžiai. Naudodami for in ciklą, padidinkite kiekvieno asmens amžių 1 metais.
