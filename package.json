@@ -5,6 +5,7 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
+    "sprendimai:uzduotys1": "node --watch sprendimai/uzduotys1.js",
     "tofixed": "node --watch uzd/tofixed.js",
     "destructuring": "node --watch operators/destructuring.js",
     "sprendimai:uzduotys2": "node --watch sprendimai/uzduotys2.js",
