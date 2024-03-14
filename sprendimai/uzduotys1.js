@@ -250,6 +250,17 @@ console.log("--------------------------------");
 
 // 1. Duomenų Objektas: Sukurkite objektą, kuris saugotų jūsų mėgstamiausios knygos pavadinimą, autorių ir leidimo metus. Išveskite kiekvieną objekto savybę naudojant for in ciklą.
 
+const book = {
+  name: "Arbuzas",
+  author: "Mike Pukuotukas",
+  year: "1965",
+};
+let text1 = " ";
+for (let x in book) {
+  text1 += book[x] + " ";
+}
+console.log(text1, '--> 1.');
+
 // 2. Vartotojų Masyvas: Sukurkite masyvą, kuriame būtų kelios objektų reikšmės, kiekviena reikšmė turėtų vartotojo vardą ir amžių.
 //    Naudodami for of ciklą, išveskite kiekvieno vartotojo vardą ir amžių.
 
@@ -259,12 +270,25 @@ const users = [
   { name: "Rasa", age: 29 },
 ];
 
-let textInfo = users.map(({ name, age }) => `${name} - ${age}` + "; ").join("");
+for (let person of users) {
+    console.log(person.name + ' ' + person.age);
+}
 
-console.log(textInfo, "--> 2.");
+// let textInfo = users.map(({ name, age }) => `${name} - ${age}` + "; ").join("");
+
+// console.log(textInfo, "--> 2.");
 
 // 3. Sąrašo Filtravimas: Turite objektų masyvą, kuriame saugoma informacija apie įvairius produktus (pavadinimas, kaina, kategorija). Parašykite funkciją,
 //    kuri naudojant for of ciklą grąžintų tik tuos produktus, kurie priklauso tam tikrai kategorijai.
+
+
+const products = [
+  { name: "siurblys", price: "220", category: "buitine technika" },
+  { name: "stalas", price: "85", category: "baldai" },
+  { name: "kavos aparatas", price: "120", category: "butine technika" },
+];
+const filteredProducts = products.filter((p) => p.category.includes("baldai"));
+console.log(filteredProducts);
 
 // 4 . Objekto Kopijavimas: Parašykite funkciją, kuri naudojant for in ciklą sukurtų objekto kopiją.
 
@@ -285,6 +309,26 @@ console.log(obj2, "--> 4.");
 
 // 5. Raktų ir Reikšmių Atrinkimas: Turite vartotojo objektą su įvairiomis savybėmis. Naudodami for in ciklą, sukurti du masyvus: viename saugokite objekto raktus, o kitame - reikšmes.
 
+const user = {
+  userName: "aviukas sonas",
+  id: "123",
+  age: "25",
+  email: "aviukas@hotmail.com",
+  phoneNumber: "86868686",
+};
+const keys = Object.keys(user);
+for (let keys in user) {
+  keys += [];
+}
+console.log(keys, '--> 5.');
+
+const values = Object.values(user);
+for (let keys in user) {
+  keys += [];
+}
+console.log(values, '--> 5.');
+
+
 // 6. Masyvo Suma: Turite masyvą, kuriame yra skaičiai. Naudodami for ciklą, apskaičiuokite masyvo skaičių sumą.
 
 let arrayNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
@@ -298,6 +342,19 @@ for (let i = 0; i < arrayNumbers.length; i++) {
 console.log(arraySum, "--> 6.");
 
 // 7. Didžiausias Skaičius: Turite skaičių masyvą. Naudodami for ciklą, raskite didžiausią skaičių masyve.
+
+
+let arrayNumbers1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+
+let arrayMax = [0];
+
+for (let i = 0; i < arrayNumbers1.length; i++) {
+  if (arrayNumbers1[i] > arrayMax) {
+  }
+  arrayMax = arrayNumbers1[i];
+}
+
+console.log(arrayMax, '--> 7.');
 
 // 8. Objekto Savybių Skaičius: Sukurkite funkciją, kuri naudojant for in ciklą, grąžina objekto savybių skaičių.
 
@@ -321,6 +378,18 @@ console.log(count, '--> 8.');
 
 
 // 9. Sąlyginis Objektų Atrinkimas: Turite vartotojų masyvą su objektais, kuriuose yra vardas ir amžius. Naudodami for of ciklą, išveskite tik tuos vartotojus, kurių amžius yra didesnis nei 18.
+
+const users1 = [
+  { name: "Monika", age: 15 },
+  { name: "Jonas", age: 20 },
+  { name: "Rasa", age: 18 },
+];
+
+const filteredUsers = users1.filter((u) => u.age >= 18);
+
+console.log(filteredUsers, '--> 9.');
+
+
 
 // 10. Objekto Savybių Keitimas: Turite objektą, kuriame saugomi įvairių žmonių amžiai. Naudodami for in ciklą, padidinkite kiekvieno asmens amžių 1 metais.
 
