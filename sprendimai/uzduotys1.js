@@ -287,8 +287,15 @@ const products = [
   { name: "stalas", price: "85", category: "baldai" },
   { name: "kavos aparatas", price: "120", category: "butine technika" },
 ];
-const filteredProducts = products.filter((p) => p.category.includes("baldai"));
-console.log(filteredProducts);
+
+for (let item of products) {
+    if (item.category === "baldai"){
+    console.log(item.name, '-->  3.');
+  }
+}
+
+// const filteredProducts = products.filter((p) => p.category.includes("baldai"));
+// console.log(filteredProducts);
 
 // 4 . Objekto Kopijavimas: Parašykite funkciją, kuri naudojant for in ciklą sukurtų objekto kopiją.
 
@@ -385,11 +392,14 @@ const users1 = [
   { name: "Rasa", age: 18 },
 ];
 
-const filteredUsers = users1.filter((u) => u.age >= 18);
+for (let person of users1) {
+  if (person.age >= 18) 
+    console.log(person.name, '--> 9.');
+};
 
-console.log(filteredUsers, '--> 9.');
+// const filteredUsers = users1.filter((u) => u.age >= 18);
 
-
+// console.log(filteredUsers, '--> 9.');
 
 // 10. Objekto Savybių Keitimas: Turite objektą, kuriame saugomi įvairių žmonių amžiai. Naudodami for in ciklą, padidinkite kiekvieno asmens amžių 1 metais.
 
