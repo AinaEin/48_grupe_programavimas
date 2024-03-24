@@ -259,7 +259,7 @@ let text1 = " ";
 for (let x in book) {
   text1 += book[x] + " ";
 }
-console.log(text1, '--> 1.');
+console.log(text1, "--> 1.");
 
 // 2. Vartotojų Masyvas: Sukurkite masyvą, kuriame būtų kelios objektų reikšmės, kiekviena reikšmė turėtų vartotojo vardą ir amžių.
 //    Naudodami for of ciklą, išveskite kiekvieno vartotojo vardą ir amžių.
@@ -271,7 +271,7 @@ const users = [
 ];
 
 for (let person of users) {
-    console.log(person.name + ' ' + person.age);
+  console.log(person.name + " " + person.age, "--> 2.");
 }
 
 // let textInfo = users.map(({ name, age }) => `${name} - ${age}` + "; ").join("");
@@ -281,7 +281,6 @@ for (let person of users) {
 // 3. Sąrašo Filtravimas: Turite objektų masyvą, kuriame saugoma informacija apie įvairius produktus (pavadinimas, kaina, kategorija). Parašykite funkciją,
 //    kuri naudojant for of ciklą grąžintų tik tuos produktus, kurie priklauso tam tikrai kategorijai.
 
-
 const products = [
   { name: "siurblys", price: "220", category: "buitine technika" },
   { name: "stalas", price: "85", category: "baldai" },
@@ -289,8 +288,8 @@ const products = [
 ];
 
 for (let item of products) {
-    if (item.category === "baldai"){
-    console.log(item.name, '-->  3.');
+  if (item.category === "baldai") {
+    console.log(item.name, "-->  3.");
   }
 }
 
@@ -327,14 +326,13 @@ const keys = Object.keys(user);
 for (let keys in user) {
   keys += [];
 }
-console.log(keys, '--> 5.');
+console.log(keys, "--> 5.");
 
 const values = Object.values(user);
 for (let keys in user) {
   keys += [];
 }
-console.log(values, '--> 5.');
-
+console.log(values, "--> 5.");
 
 // 6. Masyvo Suma: Turite masyvą, kuriame yra skaičiai. Naudodami for ciklą, apskaičiuokite masyvo skaičių sumą.
 
@@ -350,10 +348,9 @@ console.log(arraySum, "--> 6.");
 
 // 7. Didžiausias Skaičius: Turite skaičių masyvą. Naudodami for ciklą, raskite didžiausią skaičių masyve.
 
-
 let arrayNumbers1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 
-let arrayMax = [0];
+let arrayMax = 0;
 
 for (let i = 0; i < arrayNumbers1.length; i++) {
   if (arrayNumbers1[i] > arrayMax) {
@@ -361,7 +358,7 @@ for (let i = 0; i < arrayNumbers1.length; i++) {
   arrayMax = arrayNumbers1[i];
 }
 
-console.log(arrayMax, '--> 7.');
+console.log(arrayMax, "--> 7.");
 
 // 8. Objekto Savybių Skaičius: Sukurkite funkciją, kuri naudojant for in ciklą, grąžina objekto savybių skaičių.
 
@@ -375,14 +372,13 @@ let count = 0;
 
 for (let property in properties) {
   count++;
-};
+}
 
-console.log(count, '--> 8.');
+console.log(count, "--> 8.");
 
 // let count = Object.keys(properties).length;
 
 // console.log(count, "--> 8.");
-
 
 // 9. Sąlyginis Objektų Atrinkimas: Turite vartotojų masyvą su objektais, kuriuose yra vardas ir amžius. Naudodami for of ciklą, išveskite tik tuos vartotojus, kurių amžius yra didesnis nei 18.
 
@@ -393,9 +389,8 @@ const users1 = [
 ];
 
 for (let person of users1) {
-  if (person.age >= 18) 
-    console.log(person.name, '--> 9.');
-};
+  if (person.age >= 18) console.log(person.name, "--> 9.");
+}
 
 // const filteredUsers = users1.filter((u) => u.age >= 18);
 
@@ -414,3 +409,206 @@ let newAge = {};
 for (let age in personsAge) {
   console.log(personsAge[age] + 1, "--> 10.");
 }
+
+console.clear();
+
+console.log("--------------------------------");
+console.log("--------------------------------");
+console.log("--------------------------------");
+console.log("--------------------------------");
+
+//  1.  Masyvo Elementų Filtravimas: Sukurkite funkciją,
+//  kuri naudojant for ciklą iš masyvo išrenka
+//  ir grąžina naują masyvą su elementais, kurie tenkina tam tikrą sąlygą.
+
+function arrayFilter(array, condition) {
+  let newArray = [];
+
+  for (let i = 0; i < array.length; i++) {
+    let ans = condition(array[i]);
+
+    if (ans) {
+      newArray.push(ans);
+    }
+  }
+  return newArray;
+}
+
+const nameArray1 = ["Onyte", 5, "Monika"];
+
+const conditionFunction = (value) => {
+  console.log(value);
+  return typeof value === "string" ? value : null;
+};
+
+const conditionFunctionNumber = (value) => {
+  console.log(value);
+  return typeof value === "number" ? value : null;
+};
+
+const filtered = arrayFilter(nameArray1, conditionFunction);
+console.log(filtered);
+
+// 2. Unikalių Reikšmių Radimas: Turite masyvą su pasikartojančiomis reikšmėmis.
+// Naudodami for ciklą, sukurkite naują masyvą, kuriame būtų tik unikalios reikšmės
+
+function duplicateInArray(array) {
+  let duplicateElements = [];
+
+  for (const num in array) {
+    for (const num2 in array) {
+      if (num === num2) {
+        continue;
+      } else {
+        if (array[num] === array[num2]) {
+          duplicateElements.push(array[num]);
+        }
+      }
+    }
+  }
+  return [...new Set(duplicateElements)];
+}
+let arr = [1, 1, 2, 2, 3, 3, 4, 5, 6, 1];
+console.log(duplicateInArray(arr), "--> 2.");
+
+console.log("--------------------------------");
+console.log("--------------------------------");
+console.log("--------------------------------");
+console.log("--------------------------------");
+
+// 3. Objekto Gylis: Parašykite funkciją, kuri naudodama for in ciklą ir rekursiją,
+// grąžintų objekto gylį (kiek giliausiai objektas turi įdėtinius objektus).
+
+const obj3 = {
+  layer1: {
+    plane1: {
+      row1: {
+        column1: 1,
+        column2: 2,
+        column3: 3,
+      },
+    },
+  },
+  layer2: {
+    plane2: "test",
+  },
+  layer2: {
+    plane2: "test",
+  },
+  layer3: {
+    plane3: {
+      row3: {
+        column11: 1,
+        column22: 2,
+        column3: {
+          layer232: {
+            plane232: "test",
+          },
+        },
+      },
+    },
+  },
+};
+
+function objDepth(obj, depth = 1) {
+  let result = depth;
+  for (const key in obj) {
+    if (typeof obj[key] === "object") {
+      const ans = objDepth(obj[key], depth + 1);
+      result = ans;
+    }
+  }
+  return result;
+}
+
+console.log("objDepth: ", objDepth(obj3));
+
+
+// 4. Masyvo Atvirkštinis: Turite skaičių masyvą. Naudodami for ciklą, 
+// sukurkite naują masyvą, kurio elementai būtų pradinio masyvo, bet eilės atvirkščiai.
+
+let array7 = [1, 12, 2, 2, 3, 3, 4, 5, 6, 7];
+
+function reverseArray(array) {
+  let newArray = [];
+
+  for (let i = array.length - 1; i > -1; i--) {
+    newArray.push(array[i]);
+  }
+    return newArray;
+}
+
+console.log(reverseArray(array7), '--> 4.')
+
+// 5. Raktų Filtravimas Objekte: Turite objektą su daugybe savybių. Sukurkite funkciją, kuri naudojant for in ciklą, 
+// grąžina naują objektą, kuriame yra tik tas savybės, kurios tenkina tam tikrą sąlygą.
+
+
+let obj = {
+  name: 'Ona',
+  age: 24,
+  adrres: 'Varpu g.',
+  work: 'teacher',
+  bank: 'sweedbank',
+  car: 'Audi',
+};
+
+let condition = ['name', 'bank', 'car'];
+
+function queryData(data, condition) {
+    let returnData = {};
+
+    for (const key in data) {
+      if (condition.find((element) => element === key))
+        returnData = {...returnData, [key]: data[key]}
+    }
+      return returnData;
+}
+
+console.log(queryData(obj, condition), '--> 5.')
+
+
+
+// OOP UŽDUOTYS
+
+// 1 . Knygynas:
+// Sukurkite klasę, kuri reprezentuotų knygyną. Kiekviena knyga turėtų pavadinimą, autorių ir kainą.
+// Galite pridėti metodus, kad būtų galima pridėti naują knygą, pašalinti knygą arba gauti visų knygų sąrašą.
+
+const books = [
+  { id: 1, title: "Raudonkepuraite", author: "Pero", price: 24 },
+  { id: 2, title: "Zalciu karaliene", author: "Neris", price: 15 },
+  { id: 3, title: "Pepe ilgakojine", author: "Astrida", price: 21 },
+];
+
+class Book {
+  books = [];
+
+  constructor(books) {
+    this.books = books;
+  }
+  addBook(book) {
+    this.books.push(book);
+  }
+
+  removeBook(id) {
+    this.books = this.books.filter((book) => book.id !== id);
+  }
+
+  allBooks() {
+    return this.books;
+  }
+}
+
+const newBook = new Book(books);
+
+newBook.addBook({ title: "Grybu karas", author: "Grybius", price: 10 });
+console.log(newBook, "--> 1.");
+console.log("--------------------------------");
+
+newBook.removeBook(2);
+console.log(newBook, "--> 1.");
+
+console.log("--------------------------------");
+
+console.log("-->", newBook.allBooks());
